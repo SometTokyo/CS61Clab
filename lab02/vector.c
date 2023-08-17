@@ -128,7 +128,7 @@ void vector_set(vector_t *v, size_t loc, int value) {
 
     if (loc > v->size) {
         size_t temp = v->size;
-        v->size += loc+1;
+        v->size += loc;
         v->data = (int *) realloc(v->data, v->size * sizeof(int));
         if (v == NULL) {
             allocation_failed();
